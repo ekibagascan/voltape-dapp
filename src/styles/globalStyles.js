@@ -32,8 +32,8 @@ export const SpacerMedium = styled.div`
 
 // Used for providing space between components
 export const SpacerLarge = styled.div`
-  height: 400px;
-  width: 400px;
+  height: 650px;
+  width: 650px;
   @media screen and (max-width: 480px) {
     height: 250px;
     width: 250px;
