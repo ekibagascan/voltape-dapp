@@ -229,7 +229,7 @@ const Mint = () => {
         flex={1}
         ai={"center"}
         style={{ padding: "24px 38px 24px", backgroundColor: "#fff" }}
-        // image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
         <ResponsiveWrapper flex={1} test>
           <s.SpacerLarge />

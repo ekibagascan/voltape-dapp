@@ -32,8 +32,49 @@ export const SpacerMedium = styled.div`
 
 // Used for providing space between components
 export const SpacerLarge = styled.div`
+  display: flex;
   height: 650px;
   width: 650px;
+  @media screen and (max-width: 1794px) {
+    height: 550px;
+    width: 550px;
+  }
+  @media screen and (max-width: 1678px) {
+    height: 500px;
+    width: 500px;
+  }
+  @media screen and (max-width: 1579px) {
+    height: 450px;
+    width: 450px;
+  }
+  @media screen and (max-width: 1469px) {
+    height: 400px;
+    width: 400px;
+  }
+  @media screen and (max-width: 1345px) {
+    height: 360px;
+    width: 360px;
+  }
+  @media screen and (max-width: 1213px) {
+    height: 300px;
+    width: 300px;
+  }
+  @media screen and (max-width: 1108px) {
+    height: 260px;
+    width: 260px;
+  }
+  @media screen and (max-width: 975px) {
+    height: 220px;
+    width: 220px;
+  }
+  @media screen and (max-width: 878px) {
+    height: 150px;
+    width: 150px;
+  }
+  @media screen and (max-width: 766px) {
+    height: 350px;
+    width: 350px;
+  }
   @media screen and (max-width: 480px) {
     height: 250px;
     width: 250px;
