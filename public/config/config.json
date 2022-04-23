@@ -4,6 +4,10 @@
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
+    "NAME": "Trust Wallet",
+    "SYMBOL": "TWT",
+    "NAME": "Wallet Connect",
+    "SYMBOL": "WC",
     "ID": 1
   },
   "NFT_NAME": "VoltApe",
