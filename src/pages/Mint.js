@@ -116,11 +116,12 @@ const BorderLinearProgress = styled(LinearProgress)`
   color: #a85cf9;
 `;
 const Image = styled.img`
-  height: 260px;
+  height: 100%;
   width: 62%;
   border-radius: 20px;
   @media (max-width: 480px) {
-    height: 210px;
+    height: 100%;
+    width: 70%;
   }
 `;
 
