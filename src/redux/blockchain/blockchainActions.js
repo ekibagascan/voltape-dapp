@@ -90,73 +90,75 @@ export const connect = () => {
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
       }
-    } else if (trustIsInstalled) {
-      Web3EthContract.setProvider(ethereum);
-      let web3 = new Web3(ethereum);
-      try {
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        const networkId = await ethereum.request({
-          method: "net_version",
-        });
-        if (networkId == CONFIG.NETWORK.ID) {
-          const SmartContractObj = new Web3EthContract(
-            abi,
-            CONFIG.CONTRACT_ADDRESS
-          );
-          dispatch(
-            connectSuccess({
-              account: accounts[0],
-              smartContract: SmartContractObj,
-              web3: web3,
-            })
-          );
-          // Add listeners start
-          ethereum.on("accountsChanged", (accounts) => {
-            dispatch(updateAccount(accounts[0]));
-          });
-          ethereum.on("chainChanged", () => {
-            window.location.reload();
-          });
-          // Add listeners end
-        } else {
-          dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
-        }
-      } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
-      }
-    } else if (walletconnectIsInstalled) {
-      Web3EthContract.setProvider(ethereum);
-      let web3 = new Web3(ethereum);
-      try {
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        const networkId = await ethereum.request({
-          method: "net_version",
-        });
-        if (networkId == CONFIG.NETWORK.ID) {
-          const SmartContractObj = new Web3EthContract(
-            abi,
-            CONFIG.CONTRACT_ADDRESS
-          );
-          dispatch(
-            connectSuccess({
-              account: accounts[0],
-              smartContract: SmartContractObj,
-              web3: web3,
-            })
-          );
-          // Add listeners start
-          ethereum.on("accountsChanged", (accounts) => {
-            dispatch(updateAccount(accounts[0]));
-          });
-          ethereum.on("chainChanged", () => {
-            window.location.reload();
-          });
-          // Add listeners end
-        } else {
+    } 
+    // else if (trustIsInstalled) {
+    //   Web3EthContract.setProvider(ethereum);
+    //   let web3 = new Web3(ethereum);
+    //   try {
+    //     const accounts = await ethereum.request({
+    //       method: "eth_requestAccounts",
+    //     });
+    //     const networkId = await ethereum.request({
+    //       method: "net_version",
+    //     });
+    //     if (networkId == CONFIG.NETWORK.ID) {
+    //       const SmartContractObj = new Web3EthContract(
+    //         abi,
+    //         CONFIG.CONTRACT_ADDRESS
+    //       );
+    //       dispatch(
+    //         connectSuccess({
+    //           account: accounts[0],
+    //           smartContract: SmartContractObj,
+    //           web3: web3,
+    //         })
+    //       );
+    //       // Add listeners start
+    //       ethereum.on("accountsChanged", (accounts) => {
+    //         dispatch(updateAccount(accounts[0]));
+    //       });
+    //       ethereum.on("chainChanged", () => {
+    //         window.location.reload();
+    //       });
+    //       // Add listeners end
+    //     } else {
+    //       dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
+    //     }
+    //   } catch (err) {
+    //     dispatch(connectFailed("Something went wrong."));
+    //   }
+    // } else if (walletconnectIsInstalled) {
+    //   Web3EthContract.setProvider(ethereum);
+    //   let web3 = new Web3(ethereum);
+    //   try {
+    //     const accounts = await ethereum.request({
+    //       method: "eth_requestAccounts",
+    //     });
+    //     const networkId = await ethereum.request({
+    //       method: "net_version",
+    //     });
+    //     if (networkId == CONFIG.NETWORK.ID) {
+    //       const SmartContractObj = new Web3EthContract(
+    //         abi,
+    //         CONFIG.CONTRACT_ADDRESS
+    //       );
+    //       dispatch(
+    //         connectSuccess({
+    //           account: accounts[0],
+    //           smartContract: SmartContractObj,
+    //           web3: web3,
+    //         })
+    //       );
+    //       // Add listeners start
+    //       ethereum.on("accountsChanged", (accounts) => {
+    //         dispatch(updateAccount(accounts[0]));
+    //       });
+    //       ethereum.on("chainChanged", () => {
+    //         window.location.reload();
+    //       });
+    //       // Add listeners end
+    //     } 
+        else {
           dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
         }
       } catch (err) {
