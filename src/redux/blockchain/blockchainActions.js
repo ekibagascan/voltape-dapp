@@ -90,7 +90,7 @@ export const connect = () => {
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
       }
-    } 
+    }
     // else if (trustIsInstalled) {
     //   Web3EthContract.setProvider(ethereum);
     //   let web3 = new Web3(ethereum);
@@ -157,14 +157,15 @@ export const connect = () => {
     //         window.location.reload();
     //       });
     //       // Add listeners end
-    //     } 
-        else {
-          dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
-        }
-      } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
-      }
-    } else {
+    //     }
+    // else {
+    //   dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
+    // }
+    // } catch (err) {
+    //   dispatch(connectFailed("Something went wrong."));
+    // }
+    // }
+    else {
       dispatch(connectFailed("Install Metamask/Trust Wallet/Wallet Connect"));
     }
   };
