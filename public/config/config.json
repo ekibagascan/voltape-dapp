@@ -8,11 +8,11 @@
   },
   "NFT_NAME": "VoltApe",
   "SYMBOL": "VLTA",
-  "MAX_SUPPLY": 10000,
-  "WEI_COST": 2000000000000000000,
-  "DISPLAY_COST": 2,
+  "MAX_SUPPLY": 2000,
+  "WEI_COST": 50000000000000000,
+  "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/ingotink-test-1",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/volt-ape-nft-club",
   "SHOW_BACKGROUND": true
 }

@@ -23,7 +23,7 @@ export const StyledButton = styled.button`
   color: var(--secondary-text);
   width: 180px;
   cursor: pointer;
-  background: #f4e709 !important;
+  background: #20f0ee !important;
   transition: 0.3s !important;
   &:hover:before {
     transform: scale(1) !important;
@@ -50,7 +50,7 @@ export const StyledRoundButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f4e709 !important;
+  background: #20f0ee !important;
   transition: 0.3s !important;
   &:hover:before {
     transform: scale(1) !important;
@@ -113,7 +113,7 @@ const BorderLinearProgress = styled(LinearProgress)`
   margin: 16px auto 10px;
   height: 20px;
   border-radius: 5px;
-  color: #f4e709;
+  color: #a85cf9;
 `;
 const Image = styled.img`
   height: 260px;
@@ -262,7 +262,7 @@ const Mint = () => {
             <s.SpacerSmall />
             <Typography
               variant="subtitle1"
-              sx={{ fontWeight: "normal", color: "#F4E709" }}
+              sx={{ fontWeight: "normal", color: "#20F0EE" }}
             >
               Total Minted: {data.totalSupply} / {CONFIG.MAX_SUPPLY}{" "}
             </Typography>
@@ -384,7 +384,7 @@ const Mint = () => {
             )}
             <Typography
               variant="subtitle2"
-              sx={{ color: "#FFF", marginTop: "5px" }}
+              sx={{ color: "#20f0ee", marginTop: "5px" }}
             >
               OR
             </Typography>
