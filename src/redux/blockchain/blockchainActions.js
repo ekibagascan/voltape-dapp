@@ -166,7 +166,7 @@ export const connect = () => {
     // }
     // }
     else {
-      dispatch(connectFailed("Install Metamask/Trust Wallet/Wallet Connect"));
+      dispatch(connectFailed("Install Metamask"));
     }
   };
 };

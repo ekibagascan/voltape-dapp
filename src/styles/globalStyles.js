@@ -10,11 +10,6 @@ export const Screen = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  ${
-    "" /* @media screen and (max-width: 480px) {
-    min-height: 100%;
-  } */
-  }
 `;
 
 // Used for providing space between components
@@ -33,10 +28,6 @@ export const SpacerSmall = styled.div`
 export const SpacerMedium = styled.div`
   height: 24px;
   width: 24px;
-  @media screen and (max-width: 480px) {
-    height: 18px;
-    width: 18px;
-  }
 `;
 
 // Used for providing space between components
@@ -85,8 +76,8 @@ export const SpacerLarge = styled.div`
     width: 350px;
   }
   @media screen and (max-width: 480px) {
-    height: 135px;
-    width: 220px;
+    height: 250px;
+    width: 250px;
   }
 `;
 
@@ -102,6 +93,16 @@ export const Container = styled.div`
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 768px) {
+    background-image: ${({ image }) =>
+      image ? `url("/config/images/bg-mobile.png")` : "none"};
+  }
+  }
+  @media screen and (max-width: 480px) {
+    background-image: ${({ image }) =>
+      image ? `url("/config/images/bg-mobile.png")` : "none"};
+  }
 `;
 
 export const TextTitle = styled.p`
